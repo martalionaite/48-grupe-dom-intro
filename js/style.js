@@ -10,9 +10,33 @@ for (const cssClass of h1DOM.classList) {
     console.log(cssClass);
 }
 
+
 h1DOM.classList.add('main-title');
 h1DOM.classList.add('red');
 h1DOM.classList.add('bold');
 h1DOM.classList.add('italic');
+h1DOM.classList.remove('italic');
 
 console.log(h1DOM.classList);
+
+const contentDOM = document
+    .getElementsByTagName('ul')[0]
+    .getElementsByTagName('li');
+console.log(contentDOM);
+
+for (const liDOM of contentDOM) {
+    liDOM.textContent += ' (1)';
+}
+
+const contentDOM2 = document
+    .querySelector('.list > li');
+console.log(contentDOM2);
+
+const contentDOM3 = document
+    .querySelectorAll('.list')[1]
+    .querySelectorAll('li');
+console.log(contentDOM3);
+
+// .getElementById()
+// .querySelector()
+// .querySelectorAll()
